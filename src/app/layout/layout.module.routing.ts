@@ -14,22 +14,22 @@ const routes:Routes= [
         path:'',
         component:ProfileLayoutComponent,
         children:[
-            { path:'dashboard', loadChildren :()=> import('../../dashboard/dashboard.module').then(m=>m.DashboardModule)},
-            { path:'dashboard', loadChildren :()=> import('../../dashboard/dashboard.module').then(m=>m.DashboardModule)},
+            { path:'dashboard', loadChildren :()=> import('../dashboard/dashboard.module').then(m=>m.DashboardModule)},
+            { path:'profile', loadChildren :()=> import('../profile/profile.module').then(m=>m.ProfileModule)},
         ]
     },
     {
         path:'',
         component:PublicLayoutComponent,
         children:[
-            { path:'login', loadChildren:()=>import('../../login/login.module').then(m=>m.LoginModule)},
+            { path:'login', loadChildren:()=>import('../login/login.module').then(m=>m.LoginModule)},
             { path:'register', loadChildren:()=>import('../register/register.module').then(m=>m.RegisterModule)}
         ]
     }
 
  ];
 @NgModule({
-imports:[RouterModule.forRoot(routes)],
+imports:[RouterModule.forChild(routes)],
 exports:[RouterModule]
 })
 export class LayoutModuleRouting{
