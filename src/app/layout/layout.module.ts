@@ -10,16 +10,17 @@ import { SidebarLayoutComponent } from 'src/app/layout/sidebar-layout/sidebar-la
 
 
 @NgModule({
-  declarations:[
+    declarations:[
       PublicLayoutComponent,
       ProfileLayoutComponent,
       HeaderLayoutComponent,
       FooterLayoutComponent,
-      SidebarLayoutComponent],
-  imports:[
+      SidebarLayoutComponent
+    ],
+    imports:[
       CommonModule,
       LayoutModuleRouting
-  ]
+    ]
 })
 
 export class LayoutModule{
