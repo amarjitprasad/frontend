@@ -16,4 +16,9 @@ export class HttpService {
     return this.http.post(url,data);
   }
 
+  register(data:any){
+    let url = this.baseUrl+'register';
+    return this.http.post(url,data);
+  }
+
 }
