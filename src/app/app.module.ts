@@ -7,6 +7,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { LayoutModule } from 'src/app/layout/layout.module';
+import { AuthInterceptor } from 'src/app/_interceptors/auth.interceptor';
 
 const routes:Routes = [  
     { path: '**',loadChildren: () => import('./not-found/not-found.module').then(m => m.NotFoundModule)}
@@ -23,7 +24,7 @@ const routes:Routes = [
     RouterModule.forRoot(routes),
     LayoutModule
   ],
-  providers: [],
+  providers: [{provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi:true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

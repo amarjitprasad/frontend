@@ -12,4 +12,8 @@ import { DashboardRoutingModule } from 'src/app/dashboard/dashboard.routing.modu
     DashboardRoutingModule
   ]
 })
-export class DashboardModule { }
+export class DashboardModule { 
+
+  constructor(){}
+
+}

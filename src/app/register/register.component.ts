@@ -6,6 +6,7 @@ import { HttpService } from 'src/app/_services/http.service';
 import { error } from 'util';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/_services/auth.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-register',
@@ -54,7 +55,7 @@ export class RegisterComponent implements OnInit {
             },1000);
           }          
         },
-        error=>{console.log(error)}
+        error=>{ Swal.fire('Error',error.error.text,'error');}
       )
   }
 

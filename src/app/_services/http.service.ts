@@ -20,5 +20,9 @@ export class HttpService {
     let url = this.baseUrl+'register';
     return this.http.post(url,data);
   }
+  getUser(){
+    let url = this.baseUrl+'getUser';
+    return this.http.get(url);
+  }
 
 }
