@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-
+import { MatButtonModule } from '@angular/material/button';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 //httpclient model with interceptors
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
@@ -22,7 +23,9 @@ const routes:Routes = [
     BrowserAnimationsModule,
     HttpClientModule,
     RouterModule.forRoot(routes),
-    LayoutModule
+    LayoutModule,
+    MatButtonModule,
+    MatCheckboxModule
   ],
   providers: [{provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi:true}],
   bootstrap: [AppComponent]

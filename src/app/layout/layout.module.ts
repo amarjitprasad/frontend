@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { MatMenuModule } from '@angular/material/menu';
+import { MatSidenavModule } from '@angular/material/sidenav';
+
 import { LayoutModuleRouting } from './layout.module.routing';
 import { PublicLayoutComponent } from './public-layout/public-layout.component';
 import { ProfileLayoutComponent } from './profile-layout/profile-layout.component';
@@ -19,7 +22,9 @@ import { SidebarLayoutComponent } from 'src/app/layout/sidebar-layout/sidebar-la
     ],
     imports:[
       CommonModule,
-      LayoutModuleRouting
+      LayoutModuleRouting,
+      MatMenuModule,
+      MatSidenavModule     
     ]
 })
 
